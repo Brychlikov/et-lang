@@ -44,7 +44,7 @@ let report_error loc msg =
 module Int =
   struct
     type t = int
-    let compare = Pervasives.compare
+    let compare = compare
   end
 
 module Stringmap = Map.Make(String)

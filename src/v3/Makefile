@@ -14,7 +14,7 @@ opt: $(target).opt
 
 $(target): $(obj)
 	$(OCAMLC) -o $@ $(CMA_LIBS) $(obj)
-	-copy $(target) $(target).exe
+	cp $(target) $(target).exe
 
 $(target).opt: $(opt_obj)
 	$(OCAMLC_OPT) -o $@ ${CMA_LIBS:.cma=.cmax} $(opt_obj)
